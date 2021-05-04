@@ -1,0 +1,3 @@
+display :   inline > width dan height tidak bisa diatur,dan sejajar
+            inline-block > width dan height bisa diatur, dan elemennya sejajar
+            block > width dan height bisa diatur, tetapi satu elemen satu baris.

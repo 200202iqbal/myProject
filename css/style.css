@@ -18,7 +18,7 @@ a:hover
 nav
 {
   width:100vw; /*100vw : 100% viewport width*/
-  background-color: #000000;
+  background-color: #14213d;
 }
 body
 {
@@ -28,7 +28,28 @@ ul
 {
   margin:0;
   padding-left: 15%;
-  padding-top:5vh;
+  padding-top:2vh;
   padding-bottom:2vh;
   display:flex;  
+}
+.content-container
+{
+    width: 80%;
+    margin: 20px auto;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-align: justify;
+}  
+.container
+{
+    float: left;
+    width: 30%;
+    margin: 0px 15px;
+    padding: 2px;
+}
+hr
+{
+    width: 80%;
+    border: 1px solid blue;
 }
