@@ -1,0 +1,34 @@
+li
+{
+  list-style-type : none;
+  margin : 0 1vw; /*margin top and bottom = 0, margin left and right 2 viewwidth*/
+  font-size : 3vh; /* our font-size will be 3% of the height of the viewport */
+}
+a
+{
+  text-decoration:none;
+  color: #ffffff;
+  padding:1vh;
+  font-family: "Roboto Slab", serif;
+}
+a:hover
+{
+  color: #48cae4;
+}
+nav
+{
+  width:100vw; /*100vw : 100% viewport width*/
+  background-color: #000000;
+}
+body
+{
+  margin:0;
+}
+ul
+{
+  margin:0;
+  padding-left: 15%;
+  padding-top:5vh;
+  padding-bottom:2vh;
+  display:flex;  
+}
