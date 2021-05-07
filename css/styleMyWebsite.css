@@ -1,0 +1,149 @@
+body
+{
+    font:16px/28px arial,sans-serif;
+    background-color: #eaeaea;
+    color:#333;
+    margin-top: 0px;
+    background-image: url(../img/pattern.png);
+}
+
+.container
+{
+    width: 960px;
+    margin: auto;
+    background-color: white;
+
+}
+.header
+{
+    padding: 20px;
+    padding-bottom: 5px;
+    
+}
+.header .judul
+{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.header ul li
+{
+   display: inline-block;
+   margin-right: 5px;
+    
+}
+.header a
+{
+    text-decoration : none;
+    color:yellowgreen;
+    padding:3px;
+}
+ul
+{
+    padding-left:5px;
+}
+.header a:hover
+{
+    color: white;
+    background-color: tomato;
+    
+}
+.hero
+{
+    height: 320px;
+    background-image: url(../img/heroimage.png);
+    background-size: cover;
+    background-position: 0 -220px; /* 0 0 (horizontal vertical)*/
+    border-top: 5px solid rgb(163, 156, 156);
+    border-bottom: 5px solid #c45f5f;   
+}
+
+.main
+{
+    width: 600px;
+    padding-top:20px;
+    padding-left: 20px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    text-align: justify;
+    float:left;
+    
+}
+.main h2
+{
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.main .penulis
+{
+    margin-top: 0px;
+    font-size:11px;
+}
+.main .penulis a
+{
+    color:yellowgreen;
+    text-decoration:none;
+    padding:3px;
+}
+.main .penulis a:hover
+{
+    color: white;
+    background-color: tomato;
+}
+
+.main p
+{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.sidebar
+{
+    width: 300px;
+    float: right;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.sidebar img
+{
+    width: 50px;
+    float: left;
+    padding-right: 10px;
+}
+.sidebar p
+{
+    text-align: justify;
+    padding-right: 10px;
+    box-sizing: border-box;
+    font:13px/18px arial ;
+}
+.footer
+{
+    background-color: #333;
+}
+.footer .copyright
+{
+    color:#eaeaea;
+    text-align: center;
+    font-size:12px;
+    padding:5px;
+    
+}
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}

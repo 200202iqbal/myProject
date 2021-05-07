@@ -1,3 +1,130 @@
 display :   inline > width dan height tidak bisa diatur,dan sejajar
             inline-block > width dan height bisa diatur, dan elemennya sejajar
             block > width dan height bisa diatur, tetapi satu elemen satu baris.
+
+position : static
+            relative , ruang yang ditempati elemen tersebut masih ada. 
+            Ketika menggerakkan element dengan posisi relative, element akan bergerak
+            relatif terhadap posisi semula. 
+            absolute,
+
+            fixed
+Posisi non static, diibaratkan seperti elemen bergerak di sumbu z.
+sumbu x adalah horizontal, sumbu y adalah vertical, dan sumbu z adalah kedalaman.
+ketika di posisikan non static, elemen akan bergerak masuk kedepan dari sumbu z
+
+ketika position non-static (selain static) dapat mengakses properti top,bottom,left,right
+
+float : none 
+        left :memaksa elemen ke bagian kiri keluar dari flownya
+        right memaksa elemen ke bagian kanan keluar dari flownya
+element yg sudah dimodifikasi floatnya disebut overflow
+float yg tidak dimodifikasi propertinya disebut normalflow
+
+aplikasi untuk float : 
+    1. text-wrapping : text mengelilingi gambar
+    2. image-gallery
+
+membuat div otomatis dengan nomor berurut
+.(nama class){$}*5
+
+klik nama class/id/elemen di css. ctrl+d > ganti nama > save
+
+clear untuk mengatasi masalah float
+
+clear : left
+        right
+        both
+micro clearfix untuk mengatasi masalah float
+
+Pada HTML5 memperkenalkan lebih banyak deksriptif tag HTML
+yang bertujuan untuk lebih mudah dibacanya, dan bantuan untuk SEO dan
+aksesbility
+diantaranya terdapat tag :
+1. main
+2. header
+3. footer
+4. nav
+5. video
+6. article
+7. section
+
+Tag <main></main> berfungsi untuk membantu mesin pencari
+dan developer lain untuk mencari main dari sebuah halaman
+
+Untuk membuat link ke sebuah bagian internal Sections dari sebuah halaman 
+dapat menggunakan tag <a></a> dengan atribut "href" diisi dengan value Id dari sebuah 
+elemen. Contohnya <a href="#footer"></a>. 
+target ="blank" artinya ketika link di klik, otomatis akan
+membuka tab halaman baru
+
+<input type="text" placeholder="https://www.bit.ly/fcc-relaxing-cat">
+Fungsi placeholder untuk menampilkan teks di kolom element input
+sebelum user mengisi teks di kolom input
+
+Create a Form Element
+You can build web forms that actually submit data to 
+a server using nothing more than pure HTML. 
+You can do this by specifying an "action" attribute on 
+your form element.
+<form action="/url-where-you-want-to-submit-form-data">
+  <input>
+</form>
+
+Add a Submit Button to a Form
+Let's add a submit button to your form. 
+Clicking this button will send the data from your 
+form to the URL you specified with your form's "action" 
+attribute.
+
+Menambahkan atribute "required" ke dalam elemen input berguna
+supaya user harus mengisi input dan proses tidak akan bisa dilanjutkan atau 
+disubmit sebelum user mengisi kolom input.
+
+<label> 
+  <input type="radio" name="indoor-outdoor">Indoor 
+</label>
+
+<label for="indoor">
+  <input id="indoor" value="indoor" type="radio" name="indoor-outdoor">Indoor
+</label>
+<label for="outdoor">
+  <input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor">Outdoor
+</label>
+
+When a form gets submitted, the data is sent to the server and includes entries for the options selected. Inputs of type radio and checkbox report their values from the value attribute.
+Here, you have two radio inputs. When the user submits the form with the indoor option selected, the form data will include the line: indoor-outdoor=indoor. This is from the name and value attributes of the "indoor" input.
+
+If you omit the value attribute, the submitted form data uses the default value, which is on. In this scenario, if the user clicked the "indoor" option and submitted the form, the resulting form data would be indoor-outdoor=on, which is not useful. So the value attribute needs to be set to something to identify the option.
+
+You can set a checkbox or radio button to be checked by default using the checked attribute.
+
+To do this, just add the word checked to the inside of an input element. For example:
+<input type="radio" name="test-name" checked>
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
