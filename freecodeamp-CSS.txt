@@ -9,3 +9,220 @@ and a corresponding value of radio:
 [type='radio'] {
   margin: 20px 0px 20px 0px;
 }
+
+satuan unit 
+px : pixels
+
+absolute units;
+in : inches
+mm : milimeters
+Absolute length units approximate the actual measurement on a screen, 
+but there are some differences depending on a screen's resolution.
+
+relative units;
+em :
+rem :
+relative to another length value. For example, em is based on the size of an element's font. 
+If you use it to set the font-size property itself, it's relative to the parent's font-size.
+
+Jika sebuah elemen memiliki beberapa pengaturan css, untuk memprioritaskan salah satu pengaturan css
+dari beberapa pengaturan css gunakan '!important'
+
+salah cara untuk memberikan nilai di css dengan cara memberikan variabel di properti css
+contohnya;
+
+background : var(nama_variabel); //untuk inisialisasi variabel
+nama_variabel: (kode_warna); //untuk memberikan nilai properti
+
+Attach a Fallback value to a CSS Variable
+When using your variable as a CSS property value, you can attach a fallback value that your browser will revert to if the given variable is invalid.
+
+Note: This fallback is not used to increase browser compatibility, and it will not work on IE browsers. Rather, it is used so that the browser has a color to display if it cannot find your variable.
+
+Here's how you do it:
+
+background: var(--penguin-skin, black);
+
+This will set background to black if your variable wasn't set. Note that this can be useful for debugging.
+
+When you create a variable, it is available for you to use inside the selector in which you create it. It also is available in any of that selector's descendants. This happens because CSS variables are inherited, just like ordinary properties.
+
+To make use of inheritance, CSS variables are often defined in the :root element.
+
+:root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.
+
+<strong></strong> tag untuk membuat kalimat menjadi tebal
+<u></u> tag untuk membuat tulisan bergaris bawah
+<em></em> tag untuk membuat tulisan menjadi miring
+
+rgba()
+rgba stands for:
+  r = red
+  g = green
+  b = blue
+  a = alpha/level of opacity
+  The alpha value can range from 1, which is fully opaque or a solid color, to 0, which is fully transparent or clear. rgba() is great to use in this case, as it allows you to adjust the opacity. This means you don't have to completely block out the background.
+
+  box-shadow mempunyai properti :
+  offset-x : (how far to push the shadow horizontally from the element),
+  offset-y : (how far to push the shadow vertically from the element),
+  blur-radius :
+  spread-radius :
+  color :
+
+  jika dibuat dalam satu baris :
+  box-shadow : 0 10px 20px rgba();
+
+cara buat box shadow :
+box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+Mengatur transparancy elemen menggunakan opacity;
+A value of 1 is opaque, which isn't transparent at all.
+A value of 0.5 is half see-through.
+A value of 0 is completely transparent.
+opacity : ;
+
+text-transform: 
+mempunyai properti ;
+lowercase	      "transform me"
+uppercase	      "TRANSFORM ME"
+capitalize	    "Transform Me"
+initial     	  Use the default value
+inherit	        Use the text-transform value from the parent element
+none	Default: Use the original text
+
+font-weight: untuk mengatur tebalnya huruf
+
+When the position of an element is set to "relative", it allows you to specify how CSS should move it relative to its current position in the normal flow of the page. It pairs with the CSS offset properties of left or right, and top or bottom
+
+The next option for the CSS position property is absolute, which locks the element in place relative to its parent container. Unlike the relative position, this removes the element from the normal flow of the document, so surrounding items ignore it. The CSS offset properties (top or bottom and left or right) are used to adjust the position.
+
+The next layout scheme that CSS offers is the fixed position, which is a type of absolute positioning that locks an element relative to the browser window. Similar to absolute positioning, it's used with the CSS offset properties and also removes the element from the normal flow of the document. Other items no longer "realize" where it is positioned, which may require some layout adjustments elsewhere.
+
+One key difference between the fixed and absolute positions is that an element with a fixed position won't move when the user scrolls.
+
+When elements are positioned to overlap (i.e. using position: absolute | relative | fixed | sticky), the element coming later in the HTML markup will, by default, appear on the top of the other elements. However, the z-index property can specify the order of how elements are stacked on top of one another. It must be an integer (i.e. a whole number and not a decimal), and higher values for the z-index property of an element move it higher in the stack than those with lower values.
+
+Create a Gradual CSS Linear Gradient
+Applying a color on HTML elements is not limited to one flat hue. CSS provides the ability to use color transitions, otherwise known as gradients, on elements. This is accessed through the background property's linear-gradient() function. Here is the general syntax:
+
+background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);
+ecample:
+background: linear-gradient(90deg, red, yellow, rgb(204, 204, 255));
+
+Use a CSS Linear Gradient to Create a Striped Element
+The repeating-linear-gradient() function is very similar to linear-gradient() with the major difference that it repeats the specified gradient pattern. repeating-linear-gradient() accepts a variety of values, but for simplicity, you'll work with an angle value and color stop values in this challenge.
+
+The angle value is the direction of the gradient. Color stops are like width values that mark where a transition takes place, and are given with a percentage or a number of pixels.
+
+Use the CSS Transform scale Property to Change the Size of an Element
+To change the scale of an element, CSS has the transform property, along with its scale() function. The following code example doubles the size of all the paragraph elements on the page:
+
+p {
+  transform: scale(2);
+}
+
+transform mempunyai property : scale,move,rotate,skew,etc
+div:hover
+    {
+      transform:scale(1.1);
+    }
+
+Use the CSS Transform Property skewX to Skew an Element Along the X-Axis
+The next function of the transform property is skewX(), which skews the selected element along its X (horizontal) axis by a given degree.
+
+The following code skews the paragraph element by -32 degrees along the X-axis.
+
+p {
+  transform: skewX(-32deg); 
+}
+
+::before and ::after pseudo-elements. These pseudo-elements are used to add something before or after a selected element.
+
+Learn How the CSS @keyframes and animation Properties Work
+
+To animate an element, you need to know about the animation properties and the @keyframes rule. The animation properties control how the animation should behave and the @keyframes rule controls what happens during that animation. There are eight animation properties in total. This challenge will keep it simple and cover the two most important ones first:
+
+animation-name sets the name of the animation, which is later used by @keyframes to tell CSS which rules go with which animations.
+
+animation-duration sets the length of time for the animation.
+
+@keyframes is how to specify exactly what happens within the animation over the duration. This is done by giving CSS properties for specific "frames" during the animation, with percentages ranging from 0% to 100%. If you compare this to a movie, the CSS properties for 0% is how the element displays in the opening scene. The CSS properties for 100% is how the element appears at the end, right before the credits roll. Then CSS applies the magic to transition the element over the given duration to act out the scene. Here's an example to illustrate the usage of @keyframes and the animation properties:
+
+#anim {
+  animation-name: colorful;
+  animation-duration: 3s;
+}
+
+@keyframes colorful {
+  0% {
+    background-color: blue;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+
+For the element with the anim id, the code snippet above sets the animation-name to colorful and sets the animation-duration to 3 seconds. Then the @keyframes rule links to the animation properties with the name colorful. It sets the color to blue at the beginning of the animation (0%) which will transition to yellow by the end of the animation (100%). You aren't limited to only beginning-end transitions, you can set properties for the element for any percentage between 0% and 100%.
+
+Use CSS Animation to Change the Hover State of a Button
+You can use CSS @keyframes to change the color of a button in its hover state.
+
+Here's an example of changing the width of an image on hover:
+<style>
+  img:hover {
+    animation-name: width;
+    animation-duration: 500ms;
+  }
+
+  @keyframes width {
+    100% {
+      width: 40px;
+    }
+  }
+</style>
+
+<img src="https://bit.ly/smallgooglelogo" alt="Google's Logo" />
+
+Modify Fill Mode of an Animation
+That's great, but it doesn't work right yet. Notice how the animation resets after 500ms has passed, causing the button to revert back to the original color. You want the button to stay highlighted.
+
+This can be done by setting the animation-fill-mode property to forwards. The animation-fill-mode specifies the style applied to an element when the animation has finished. You can set it like so:
+
+animation-fill-mode: forwards;
+
+Create Movement Using CSS Animation
+When elements have a specified position, such as fixed or relative, the CSS offset properties right, left, top, and bottom can be used in animation rules to create movement.
+
+As shown in the example below, you can push the item downwards then upwards by setting the top property of the 50% keyframe to 50px, but having it set to 0px for the first (0%) and the last (100%) keyframe.
+
+@keyframes rainbow {
+  0% {
+    background-color: blue;
+    top: 0px;
+  }
+  50% {
+    background-color: green;
+    top: 50px;
+  }
+  100% {
+    background-color: yellow;
+    top: 0px;
+  }
+}
+
+The previous challenges covered how to use some of the animation properties and the @keyframes rule. Another animation property is the animation-iteration-count, which allows you to control how many times you would like to loop through the animation. Here's an example:
+
+animation-iteration-count: 3;
+
+animation-timing-function says how the car accelerates and decelerates over the course of the drive
+There are a number of predefined keywords available for popular options. For example, the default value is ease, which starts slow, speeds up in the middle, and then slows down again in the end. Other options include ease-out, which is quick in the beginning then slows down, ease-in, which is slow in the beginning, then speeds up at the end, or linear, which applies a constant animation speed throughout.
+
+
+The last challenge introduced the animation-timing-function property and a few keywords that change the speed of an animation over its duration. CSS offers an option other than keywords that provides even finer control over how the animation plays out, through the use of Bezier curves.
+
+In CSS animations, Bezier curves are used with the cubic-bezier function. The shape of the curve represents how the animation plays out. The curve lives on a 1 by 1 coordinate system. The X-axis of this coordinate system is the duration of the animation (think of it as a time scale), and the Y-axis is the change in the animation.
+
+The cubic-bezier function consists of four main points that sit on this 1 by 1 grid: p0, p1, p2, and p3. p0 and p3 are set for you - they are the beginning and end points which are always located respectively at the origin (0, 0) and (1, 1). You set the x and y values for the other two points, and where you place them in the grid dictates the shape of the curve for the animation to follow. This is done in CSS by declaring the x and y values of the p1 and p2 "anchor" points in the form: (x1, y1, x2, y2). Pulling it all together, here's an example of a Bezier curve in CSS code:
+
+animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
