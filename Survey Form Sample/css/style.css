@@ -1,0 +1,108 @@
+
+*
+{
+    box-sizing: border-box;  
+}
+body
+{
+    margin:0;
+    padding:0;
+    background-color: #071e26;
+}
+header,
+main
+{
+    width: 80%;
+    margin:auto;
+}
+header
+{
+    margin-top:5%;
+    background-color:#fff;
+    padding:10px;
+    box-sizing: border-box;   
+}
+
+.header-container > .container
+{
+    display: flex;
+    justify-content: center;
+}
+
+.main-container
+{
+    
+    background-color: #e9f5f9;
+    
+}
+.main-container .wrapper
+{
+    background-color: #fff;
+    padding:20px;
+}
+.form-group
+{
+    display: flex;
+    flex-direction: column;
+    margin-top:10px;
+}
+.form-title, 
+.form-phonenumber,
+.form-address,
+.form-city,
+.form-email
+{
+    display: flex;
+    flex-direction: column;
+    margin:5px;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"]
+{
+    height:30px;
+    border:none;
+    border-bottom:3px solid #071e26;
+}
+.form-group > label
+{
+    margin:5px 0;
+}
+.form-group > #radioGender
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-group > #radioOld
+{
+    display: flex;
+    flex-direction: column;
+
+}
+.form-labelRadio
+{
+    display: flex;
+    flex-direction: row;
+}
+.form-labelRadio > label
+{
+    margin-left:10px;
+}
+
+input[type="submit"],
+input[type="button"]
+{
+    width:auto;
+    height:27px;
+}
+#btn-cancel
+{
+    border:none;
+    color:red;
+    background-color: #fff;
+}
+.form-submit
+{
+    display:block;
+}

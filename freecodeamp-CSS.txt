@@ -104,18 +104,24 @@ One key difference between the fixed and absolute positions is that an element w
 When elements are positioned to overlap (i.e. using position: absolute | relative | fixed | sticky), the element coming later in the HTML markup will, by default, appear on the top of the other elements. However, the z-index property can specify the order of how elements are stacked on top of one another. It must be an integer (i.e. a whole number and not a decimal), and higher values for the z-index property of an element move it higher in the stack than those with lower values.
 
 Create a Gradual CSS Linear Gradient
+_________________________________________
 Applying a color on HTML elements is not limited to one flat hue. CSS provides the ability to use color transitions, otherwise known as gradients, on elements. This is accessed through the background property's linear-gradient() function. Here is the general syntax:
 
 background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);
 ecample:
 background: linear-gradient(90deg, red, yellow, rgb(204, 204, 255));
 
+
 Use a CSS Linear Gradient to Create a Striped Element
+________________________________________
 The repeating-linear-gradient() function is very similar to linear-gradient() with the major difference that it repeats the specified gradient pattern. repeating-linear-gradient() accepts a variety of values, but for simplicity, you'll work with an angle value and color stop values in this challenge.
 
 The angle value is the direction of the gradient. Color stops are like width values that mark where a transition takes place, and are given with a percentage or a number of pixels.
 
+
 Use the CSS Transform scale Property to Change the Size of an Element
+_____________________________________________________________________
+
 To change the scale of an element, CSS has the transform property, along with its scale() function. The following code example doubles the size of all the paragraph elements on the page:
 
 p {
@@ -128,7 +134,10 @@ div:hover
       transform:scale(1.1);
     }
 
+
 Use the CSS Transform Property skewX to Skew an Element Along the X-Axis
+_____________________________________________________________________
+
 The next function of the transform property is skewX(), which skews the selected element along its X (horizontal) axis by a given degree.
 
 The following code skews the paragraph element by -32 degrees along the X-axis.
@@ -226,3 +235,362 @@ In CSS animations, Bezier curves are used with the cubic-bezier function. The sh
 The cubic-bezier function consists of four main points that sit on this 1 by 1 grid: p0, p1, p2, and p3. p0 and p3 are set for you - they are the beginning and end points which are always located respectively at the origin (0, 0) and (1, 1). You set the x and y values for the other two points, and where you place them in the grid dictates the shape of the curve for the animation to follow. This is done in CSS by declaring the x and y values of the p1 and p2 "anchor" points in the form: (x1, y1, x2, y2). Pulling it all together, here's an example of a Bezier curve in CSS code:
 
 animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+
+mandatory = wajib
+redundant = mubazir
+therefore = karena itu
+appropriate = sesuai
+
+<img src="" alt="">
+
+Semantic meaning means that the tag you use around content indicates the type of information it contains
+<header>
+  #bagian untuk judul
+</header>
+<main>
+  #bagian untuk main topik
+</main>
+<footer>
+  #bagian untuk footer
+</footer>
+
+header tag. It's used to wrap introductory information or navigation links for its parent tag and works well around content that's repeated at the top on multiple pages.
+
+article is a sectioning element and is used to wrap independent, self-contained content. The tag works well with blog entries, forum posts, or news articles.
+<article>
+
+</article>
+
+The section element is also new with HTML5, and has a slightly different semantic meaning than article. 
+An article is for standalone content, and a section is for grouping thematically related content. They can be used within each other, as needed. For example, if a book is the <article>, then each chapter is a <section>. When there's no relationship between groups of content, then use a <div>.
+
+<div> - groups content <section> - groups related content <article> - groups independent, self-contained content
+
+The nav element is another HTML5 item with the embedded landmark feature for easy screen reader navigation. This tag is meant to wrap around the main navigation links in your page.
+
+the footer element has a built-in landmark feature that allows assistive devices to quickly navigate to it. It's primarily used to contain copyright information or links to related documents that usually sit at the bottom of a page. <footer> </footer>
+
+presence = kehadiran
+
+Audio element
+______________________
+<audio id="" controls>
+  <source src="" type="">
+</audio>
+HTML5's audio element gives semantic meaning when it wraps sound or audio stream content in your markup. Audio content also needs a text alternative to be accessible to people who are deaf or hard of hearing. This can be done with nearby text on the page or a link to a transcript.
+
+The audio tag supports the controls attribute. This shows the browser default play, pause, and other controls, and supports keyboard functionality. This is a boolean attribute, meaning it doesn't need a value, its presence on the tag turns the setting on.
+
+Figure Element
+________________________
+<figure>
+  <img src="roundhouseDestruction.jpeg" alt="Photo of Camper Cat executing a roundhouse kick">
+  <br>
+  <figcaption>
+    Master Camper Cat demonstrates proper form of a roundhouse kick.
+  </figcaption>
+</figure>
+
+HTML5 introduced the figure element and the related figcaption. Used together, these items wrap a visual representation (like an image, diagram, or chart) along with its caption. Wrapping these elements together gives a two-fold accessibility boost by semantically grouping related content and providing a text alternative explaining the figure.
+
+For data visualizations like charts, the caption can be used to briefly note the trends or conclusions for users with visual impairments. Another challenge covers how to move a table version of the chart's data off-screen (using CSS) for screen reader users.
+
+Label Element
+__________________________________
+<form>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+</form>
+
+The <label> tag wraps the text for a specific form control item, usually the name or label for a choice. This ties meaning to the item and makes the form more readable. The "for" attribute on a <label> tag explicitly associates that label with the form control and is used by screen readers.
+
+You learned about radio buttons and their labels in a lesson in the Basic HTML section. In that lesson, we wrapped the radio button input element inside a label element along with the label text in order to make the text clickable. Another way to achieve this is by using the for attribute, as explained in this lesson.
+
+The value of the for attribute must be the same as the value of the id attribute of the form control. 
+
+Fieldset and Legend Element
+________________________________________
+
+<form>
+  <fieldset>
+    <legend>Choose one of these three items:</legend>
+    <input id="one" type="radio" name="items" value="one">
+    <label for="one">Choice One</label><br>
+    <input id="two" type="radio" name="items" value="two">
+    <label for="two">Choice Two</label><br>
+    <input id="three" type="radio" name="items" value="three">
+    <label for="three">Choice Three</label>
+  </fieldset>
+</form>
+
+Each choice is given a <label> with a "for" attribute tying to the "id" of the corresponding item as covered in the last challenge. Since radio buttons often come in a group where the user must choose one, there's a way to semantically show the choices are part of a set.
+
+The "fieldset" tag surrounds the entire grouping of radio buttons to achieve this. It often uses a "legend" tag to provide a description for the grouping, which screen readers read for each choice in the "fieldset" element.
+
+The "fieldset" wrapper and "legend" tag are not necessary when the choices are self-explanatory, like a gender selection. Using a <label> with the "for" attribute for each radio button is sufficient.
+
+Datepicker Element
+________________________________________
+<label for="input1">Enter a date:</label>
+<input type="date" id="input1" name="input1">
+<input type="submit" name="submit" value="Submit">
+
+Forms often include the <input> field, which can be used to create several different form controls. The <type> attribute on this element indicates what kind of <input> element will be created.
+
+You may have noticed the <text> and <submit> input types in prior challenges, and HTML5 introduced an option to specify a <date> field. Depending on browser support, a date picker shows up in the <input> field when it's in focus, which makes filling in a form easier for all users.
+
+For older browsers, the type will default to <text>, so it helps to show users the expected date format in the <label> or <placeholder> text just in case.
+
+Datetime Element
+________________________________________
+<p>Master Camper Cat officiated the cage match between Goro and Scorpion 
+<time datetime="2013-02-13">last Wednesday
+</time>, which ended in a draw.</p>
+
+Continuing with the date theme, HTML5 also introduced the <time> element along with a <datetime> attribute to standardize times. The <time> element is an inline element that can wrap a date or time on a page. A <datetime> attribute holds a valid format of that date. This is the value accessed by assistive devices. It helps avoid confusion by stating a standardized version of a time, even if it's informally or colloquially written in the text.
+
+<sup> </sup> Element
+_________________________________________
+digunakan untuk membuat tulisan kecil diatas seperti pangkat
+contohnya, Thursday,September 15<sup>th</sup> Huruf th menjadi kecil diatas tanggal 15
+
+High Contrast text
+_________________________________________
+The Web Content Accessibility Guidelines (WCAG) recommend at least a 4.5 to 1 contrast ratio for normal text.
+
+The ratio is calculated by comparing the relative luminance values of two colors. This ranges from 1:1 for the same color, or no contrast, to 21:1 for white against black, the most substantial contrast. There are many contrast checking tools available online that calculate this ratio for you.
+
+AccessKey attribute
+_________________________________________
+
+<button accesskey="b">Important Button</button>
+
+HTML offers the "accesskey" attribute to specify a shortcut key to activate or bring focus to an element. Adding an "accesskey" attribute can make navigation more efficient for keyboard-only users.
+
+HTML5 allows this attribute to be used on any element, but it's particularly useful when it's used with interactive ones. This includes links, buttons, and form controls.
+
+Menambahkan accesskey tidak hanya terbatas pada button saja tetapi semua elemen dapat diberikan accesskey supaya bisa lebih cepat dan efisien dalam mengakses
+halaman website
+
+Tabindex Attribute
+_________________________________________
+
+<div tabindex="0">I need keyboard focus!</div>
+
+The HTML "tabindex" attribute has three distinct functions relating to an element's keyboard focus. When it's on a tag, it indicates that the element can be focused on. The value (an integer that's positive, negative, or zero) determines the behavior.
+
+Certain elements, such as links and form controls, automatically receive keyboard focus when a user tabs through a page. It's in the same order as the elements come in the HTML source markup. This same functionality can be given to other elements, such as "div", "span", and "p", by placing a tabindex="0" attribute on them. 
+
+Note: A negative tabindex value (typically -1) indicates that an element is focusable, but is not reachable by the keyboard. This method is generally used to bring focus to content programmatically (like when a div used for a pop-up window is activated), and is beyond the scope of these challenges.
+
+Add a "tabindex" attribute to the "p" tag and set its value to 0. Bonus - using "tabindex" also enables the CSS pseudo-class :focus to work on the "p"
+
+Use tabindex to Specify the Order of Keyboard Focus for Several Elements
+____________________________________________
+
+<div tabindex="1">I get keyboard focus, and I get it first!</div>
+
+<div tabindex="2">I get keyboard focus, and I get it second!</div>
+
+The "tabindex" attribute also specifies the exact tab order of elements. This is achieved when the attribute's value is set to a positive number of 1 or higher.
+
+Setting a tabindex="1" will bring keyboard focus to that element first. Then it cycles through the sequence of specified tabindex values (2, 3, etc.), before moving to default and tabindex="0" items.
+
+It's important to note that when the tab order is set this way, it overrides the default order (which uses the HTML source). This may confuse users who are expecting to start navigation from the top of the page. This technique may be necessary in some circumstances, but in terms of accessibility, take care before applying it.
+
+#html element untuk mensearch 
+
+<label for="search">Search:</label>
+<input type="search" name="search" id="search">
+<input type="submit" name="submit" value="Submit" id="submit">
+
+Creating a Media Query
+____________________________________________
+
+Media Queries are a new technique introduced in CSS3 that change the presentation of content based on different viewport sizes.
+The viewport is a user's visible area of a web page, and is different depending on the device used to access the site.
+
+Media Queries consist of a media type, and if that media type matches the type of device the document is displayed on, the styles are applied. You can have as many selectors and styles inside your media query as you want.
+
+Here's an example of a media query that returns the content when the device's width is less than or equal to 100px:
+
+# max-width <= 100px
+@media (max-width: 100px) { /* CSS Rules */ }  
+
+and the following media query returns the content when the device's height is more than or equal to 350px:
+
+# min-width >= 350px
+
+@media (min-height: 350px) { /* CSS Rules */ }
+
+Remember, the CSS inside the media query is applied only if the media type matches that of the device being used.
+
+
+Make an Image Responsive
+____________________________________________
+
+Making images responsive with CSS is actually very simple. You just need to add these properties to an image:
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+The max-width of 100% will make sure the image is never wider than the container it is in, and the height of auto will make the image keep its original aspect ratio.
+
+Use a Retina Image for Higher Resolution Displays
+____________________________________________
+
+With the increase of internet connected devices, their sizes and specifications vary, and the displays they use could be different externally and internally. Pixel density is an aspect that could be different on one device from others and this density is known as Pixel Per Inch(PPI) or Dots Per Inch(DPI). The most famous such display is the one known as a "Retina Display" on the latest Apple MacBook Pro notebooks, and recently iMac computers. Due to the difference in pixel density between a "Retina" and "Non-Retina" displays, some images that have not been made with a High-Resolution Display in mind could look "pixelated" when rendered on a High-Resolution display.
+
+The simplest way to make your images properly appear on High-Resolution Displays, such as the MacBook Pros "retina display" is to define their width and height values as only half of what the original file is. Here is an example of an image that is only using half of the original height and width:
+
+<style>
+  img { height: 250px; width: 250px; }
+</style>
+<img src="coolPic500x500" alt="A most excellent picture">
+
+Make Typography Responsive
+____________________________________________
+
+Instead of using em or px to size text, you can use viewport units for responsive typography. Viewport units, like percentages, are relative units, but they are based off different items. Viewport units are relative to the viewport dimensions (width or height) of a device, and percentages are relative to the size of the parent container element.
+
+The four different viewport units are:
+
+vw (viewport width): 10vw would be 10% of the viewport's width.
+vh (viewport height): 3vh would be 3% of the viewport's height.
+vmin (viewport minimum): 70vmin would be 70% of the viewport's smaller dimension (height or width).
+vmax (viewport maximum): 100vmax would be 100% of the viewport's bigger dimension (height or width).
+
+Here is an example that sets a body tag to 30% of the viewport's width.
+
+body { width: 30vw; }
+
+Use the flex-direction Property to Make a Row
+____________________________________________
+
+Adding display: flex to an element turns it into a flex container. This makes it possible to align any children of that element into rows or columns. You do this by adding the flex-direction property to the parent item and setting it to row or column. Creating a row will align the children horizontally, and creating a column will align the children vertically.
+
+Other options for "flex-direction" are "row-reverse" and "column-reverse"
+Note: The default value for the flex-direction property is row.
+
+Align Elements Using the justify-content Property
+____________________________________________
+
+Sometimes the flex items within a flex container do not fill all the space in the container. It is common to want to tell CSS how to align and space out the flex items a certain way. Fortunately, the justify-content property has several options to do this. But first, there is some important terminology to understand before reviewing those options.
+
+Recall that setting a flex container as a row places the flex items side-by-side from left-to-right. A flex container set as a column places the flex items in a vertical stack from top-to-bottom. For each, the direction the flex items are arranged is called the main axis. For a row, this is a horizontal line that cuts through each item. And for a column, the main axis is a vertical line through the items.
+
+There are several options for how to space the flex items along the line that is the main axis. One of the most commonly used is justify-content: center;, which aligns all the flex items to the center inside the flex container. Other options include:
+
+justify-content:center / flex-start / flex-end / space-between / space-around / space-evenly
+
+flex-start: aligns items to the start of the flex container. For a row, this pushes the items to the left of the container. For a column, this pushes the items to the top of the container. This is the default alignment if no justify-content is specified.
+
+flex-end: aligns items to the end of the flex container. For a row, this pushes the items to the right of the container. For a column, this pushes the items to the bottom of the container.
+
+space-between: aligns items to the center of the main axis, with extra space placed between the items. The first and last items are pushed to the very edge of the flex container. For example, in a row the first item is against the left side of the container, the last item is against the right side of the container, then the remaining space is distributed evenly among the other items.
+
+space-around: similar to space-between but the first and last items are not locked to the edges of the container, the space is distributed around all the items with a half space on either end of the flex container.
+
+space-evenly: Distributes space evenly between the flex items with a full space at either end of the flex container
+
+Align Elements Using the align-items Property
+____________________________________________
+
+The align-items property is similar to justify-content. Recall that the justify-content property aligned flex items along the main axis. For rows, the main axis is a horizontal line and for columns it is a vertical line.
+
+Flex containers also have a cross axis which is the opposite of the main axis. For rows, the cross axis is vertical and for columns, the cross axis is horizontal.
+
+CSS offers the align-items property to align flex items along the cross axis. For a row, it tells CSS how to push the items in the entire row up or down within the container. And for a column, how to push all the items left or right within the container.
+
+The different values available for align-items include:
+
+flex-start: aligns items to the start of the flex container. For rows, this aligns items to the top of the container. For columns, this aligns items to the left of the container.
+
+flex-end: aligns items to the end of the flex container. For rows, this aligns items to the bottom of the container. For columns, this aligns items to the right of the container.
+
+center: align items to the center. For rows, this vertically aligns items (equal space above and below the items). For columns, this horizontally aligns them (equal space to the left and right of the items).
+
+stretch: stretch the items to fill the flex container. For example, rows items are stretched to fill the flex container top-to-bottom. This is the default value if no align-items value is specified.
+
+baseline: align items to their baselines. Baseline is a text concept, think of it as the line that the letters sit on.
+
+kesimpulannya: justify-content memiliki pilihan row dan column. row berarti sumbu utamanya berupa horizontal sedangkan column sumbu utamanya berupa vertikal.
+                sedangkan align-items juga memiliki sumbu referensi tetapi berkebalikan dengan justify-content yang disebut sebagai "cross axis".
+                untuk row, cross axisnya adalah vertikal, sedangkan column cross axisnya adalah horizontal
+
+
+Use the flex-wrap Property to Wrap a Row or Column
+____________________________________________
+
+CSS flexbox has a feature to split a flex item into multiple rows (or columns). By default, a flex container will fit all flex items together. For example, a row will all be on one line.
+
+However, using the "flex-wrap" property tells CSS to wrap items. This means extra items move into a new row or column. The break point of where the wrapping happens depends on the size of the items and the size of the container.
+
+CSS also has options for the direction of the wrap:
+
+nowrap: this is the default setting, and does not wrap items.
+
+wrap: wraps items onto multiple lines from top-to-bottom if they are in rows and left-to-right if they are in columns.
+
+wrap-reverse: wraps items onto multiple lines from bottom-to-top if they are in rows and right-to-left if they are in columns.
+
+Use the flex-shrink Property to Shrink Items
+____________________________________________
+
+flex-shrink: ;
+
+So far, all the properties in the challenges apply to the flex container (the parent of the flex items). However, there are several useful properties for the flex items.
+
+The first is the "flex-shrink" property. When it's used, it allows an item to shrink if the flex container is too small. Items shrink when the width of the parent container is smaller than the combined widths of all the flex items within it.
+
+The flex-shrink property takes numbers as values. The higher the number, the more it will shrink compared to the other items in the container. For example, if one item has a flex-shrink value of 1 and the other has a flex-shrink value of 3, the one with the value of 3 will shrink three times as much as the other.
+
+
+Use the flex-grow Property to Expand Items
+____________________________________________
+
+flex-grow: ;
+The opposite of flex-shrink is the flex-grow property. Recall that flex-shrink controls the size of the items when the container shrinks. The flex-grow property controls the size of items when the parent container expands.
+
+Using a similar example from the last challenge, if one item has a flex-grow value of 1 and the other has a flex-grow value of 3, the one with the value of 3 will grow three times as much as the other.
+
+
+Use the flex-basis Property to Set the Initial Size of an Item
+_____________________________________________________________________
+
+flex-basis: px / em / %;
+The flex-basis property specifies the initial size of the item before CSS makes adjustments with flex-shrink or flex-grow.
+
+The units used by the flex-basis property are the same as other size properties (px, em, %, etc.). The value auto sizes items based on the content.
+
+
+Use the flex Shorthand Property
+________________________________________
+
+There is a shortcut available to set several flex properties at once. The "flex-grow", "flex-shrink", and "flex-basis" properties can all be set together by using the "flex" property.
+
+For example, flex: 1 0 10px; will set the item to flex-grow: 1;, flex-shrink: 0;, and flex-basis: 10px;.
+
+The default property settings are flex: 0 1 auto;.
+
+
+Use the order Property to Rearrange Items
+________________________________________
+
+order: ;
+
+The "order" property is used to tell CSS the order of how flex items appear in the flex container. By default, items will appear in the same order they come in the source HTML. The property takes numbers as values, and negative numbers can be used.
+
+
+Use the align-self Property
+________________________________________
+
+align-self: 
+propertinya mirip seperti align-items seperti ; center,flex-start,flex-end dsb
+
+The final property for flex items is "align-self". This property allows you to adjust each item's alignment individually, instead of setting them all at once. This is useful since other common adjustment techniques using the CSS properties float, clear, and vertical-align do not work on flex items.
+
+"align-self" accepts the same values as "align-items" and will override any value set by the "align-items" property.
+
